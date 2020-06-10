@@ -1,0 +1,26 @@
+{
+    "url01": "https://dog.ceo",
+    "path01": "/api/breeds/image/random",
+    "header01": {
+        "Content-Type": "application/json",
+        "X-CSRF-TOKEN": ""
+    },
+    "body01": {
+        "param1": 0,
+        "param2": 1,
+        "param3": 2
+    },
+
+    
+    "url02": "https://dog.ceo",
+    "path02": "200",
+    "header02": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "X-CSRF-TOKEN": ""
+    },
+    "body02": {
+        "param1": 0,
+        "param2": 1,
+        "param3": 2
+    }
+}

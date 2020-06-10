@@ -1,0 +1,36 @@
+{
+  "name": "httprunnerjs",
+  "version": "1.0.0",
+  "description": "http https socket websocket api test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Musule/HttpRunnerJS.git"
+  },
+  "keywords": [
+    "api",
+    "http",
+    "https",
+    "socket",
+    "websocket",
+    "test"
+  ],
+  "author": "liyinchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Musule/HttpRunnerJS/issues"
+  },
+  "homepage": "https://github.com/Musule/HttpRunnerJS#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "axios-mock-adapter": "^1.18.1",
+    "chalk": "^4.1.0",
+    "lowdb": "^1.0.0",
+    "mocha": "^7.2.0",
+    "mochawesome": "^6.1.1",
+    "qs": "^6.9.4"
+  }
+}
