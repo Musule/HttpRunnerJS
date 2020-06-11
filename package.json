@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mochawesome":"./node_modules/.bin/mocha --reporter mochawesome",
-    "allure":"./node_modules/.bin/mocha --reporter mocha-allure-reporter",
-    "spec":"./node_modules/.bin/mocha --reporter spec",
-    "dot":"./node_modules/.bin/mocha --reporter dot",
-    "tap":"./node_modules/.bin/mocha --reporter tap",
-    "junit":"./node_modules/.bin/mocha --reporter mocha-junit-reporter",
-    "doc":"./node_modules/.bin/mocha --reporter doc",
-    "xunit":"./node_modules/.bin/mocha --reporter-option output=filename.xml",
-    "progress":"./node_modules/.bin/mocha --reporter progress",
-    "landing":"./node_modules/.bin/mocha --reporter landing",
-    "list":"./node_modules/.bin/mocha --reporter list",
-    "JSONStream":"./node_modules/.bin/mocha --reporter json-stream"
+    "mochawesome": "./node_modules/.bin/mocha --reporter mochawesome",
+    "allure": "./node_modules/.bin/mocha --reporter mocha-allure-reporter",
+    "spec": "./node_modules/.bin/mocha --reporter spec",
+    "dot": "./node_modules/.bin/mocha --reporter dot",
+    "tap": "./node_modules/.bin/mocha --reporter tap",
+    "junit": "./node_modules/.bin/mocha --reporter mocha-junit-reporter",
+    "doc": "./node_modules/.bin/mocha --reporter doc",
+    "xunit": "./node_modules/.bin/mocha --reporter-option output=filename.xml",
+    "progress": "./node_modules/.bin/mocha --reporter progress",
+    "landing": "./node_modules/.bin/mocha --reporter landing",
+    "list": "./node_modules/.bin/mocha --reporter list",
+    "JSONStream": "./node_modules/.bin/mocha --reporter json-stream"
   },
   "repository": {
     "type": "git",
@@ -40,12 +40,16 @@
     "axios": "^0.19.2",
     "axios-mock-adapter": "^1.18.1",
     "chalk": "^4.1.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
     "lowdb": "^1.0.0",
     "mocha": "^7.2.0",
     "mocha-allure-reporter": "^1.4.0",
     "mocha-junit-reporter": "^2.0.0",
     "mochawesome": "^6.1.1",
     "mochawesome-report-generator": "^5.1.0",
-    "qs": "^6.9.4"
+    "qs": "^6.9.4",
+    "socket.io": "^2.3.0",
+    "websocket": "^1.0.31"
   }
 }
