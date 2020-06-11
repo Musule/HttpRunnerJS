@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var WebSocketServer = require('websocket').server;
 var http = require('http');
- 
+var chalk = require('chalk')
 var server = http.createServer(function(request, response) {
     console.log((new Date()) + ' Received request for ' + request.url);
     response.writeHead(404);
@@ -10,7 +10,7 @@ var server = http.createServer(function(request, response) {
 
 // 监听端口
 server.listen(8080, function() {
-    console.log((new Date()) + ' Server is listening on port 8080');
+    console.log(chalk.yellow.bold((new Date()) + ' Server is listening on port 8080'));
 });
  
 wsServer = new WebSocketServer({
@@ -32,7 +32,7 @@ wsServer.on('request', function(request) {
     if (!originIsAllowed(request.origin)) {
       // Make sure we only accept requests from an allowed origin
       request.reject();
-      console.log((new Date()) + ' Connection from origin ' + request.origin + ' rejected.');
+      console.log(chalk.blue.bold((new Date()) + ' Connection from origin ' + request.origin + ' rejected.'));
       return;
     }
     
@@ -40,15 +40,15 @@ wsServer.on('request', function(request) {
     console.log((new Date()) + ' Connection accepted.');
     connection.on('message', function(message) {
         if (message.type === 'utf8') {
-            console.log('Received Message: ' + message.utf8Data);
+            console.log(chalk.blue.bold('Received Message: ' + message.utf8Data));
             connection.sendUTF(message.utf8Data);
         }
         else if (message.type === 'binary') {
-            console.log('Received Binary Message of ' + message.binaryData.length + ' bytes');
+            console.log(chalk.blue.bold('Received Binary Message of ' + message.binaryData.length + ' bytes'));
             connection.sendBytes(message.binaryData);
         }
     });
     connection.on('close', function(reasonCode, description) {
-        console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');
+        console.log(chalk.blue.bold((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.'));
     });
 });

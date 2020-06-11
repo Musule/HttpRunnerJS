@@ -1,28 +1,26 @@
 #!/usr/bin/env node
 var WebSocketClient = require('websocket').client;
-
+var chalk = require('chalk')
 var client = new WebSocketClient();
 
-
-
-describe.skip('websocket client', () => {
+describe('websocket client', () => {
 
     it("websocket connect", () => {
         client.on('connect', function (connection) {
             // websocket 客户端连接成功后
-            console.log('WebSocket Client Connected');
+            console.log(chalk.blue.bold('WebSocket Client Connected'));
             // websocket 客户端发生错误时
             connection.on('error', function (error) {
-                console.log("Connection Error: " + error.toString());
+                console.log(chalk.red.bold("Connection Error: " + error.toString()));
             });
             // websocket 客户端连接关闭后
             connection.on('close', function () {
-                console.log('echo-protocol Connection Closed');
+                console.log(chalk.blue.bold('echo-protocol Connection Closed'));
             });
             // websocket 客户端连接关闭后
             connection.on('message', function (message) {
                 if (message.type === 'utf8') {
-                    console.log("Received: '" + message.utf8Data + "'");
+                    console.log(chalk.blue.bold("Received: '" + message.utf8Data + "'"));
                 }
             });
 
@@ -41,7 +39,7 @@ describe.skip('websocket client', () => {
 
     it('websocket connectFailed', () => {
         client.on('connectFailed', function (error) {
-            console.log('Connect Error: ' + error.toString());
+            console.log(chalk.red.bold('Connect Error: ' + error.toString()));
         });
     });
 });

@@ -23,7 +23,7 @@ before("所有脚本执行前执行", () => {
 
 })
 
-describe("application/json", () => {
+describe("http/https application/json", () => {
     it("GET  The first format", () => {
         // Mocking a GET request
         Mock.onGet("/users", { params: { searchText: "Jack" } }).reply(200, {
@@ -88,7 +88,7 @@ describe("application/json", () => {
     })
 
 })
-describe("multipart/form-data", () => {
+describe("http/https multipart/form-data", () => {
 
     it.skip("POST", () => {
         // Mocking a POST request
@@ -117,7 +117,7 @@ describe("multipart/form-data", () => {
 })
 
 
-describe("application/x-www-form-urlencoded", () => {
+describe("http/https application/x-www-form-urlencoded", () => {
     it.skip("POST", () => {
         /**
          * @param url 请求地址

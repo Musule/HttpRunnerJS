@@ -33,7 +33,7 @@ it("GET The second format", () => {
         })
     })
 ```
-
+![img](static/image/websocket-server.png)
 
 #### client-websocket.js
 
@@ -68,10 +68,12 @@ it("GET The second format", () => {
         client.connect('ws://localhost:8080/', 'echo-protocol');
 ```
 
-* 配合示例，启动本地websocket服务
+* 配合client-websocket.js示例，启动本地websocket服务
 ```bash
-node server\server-websocket.js
+node server/server-websocket.js
 ```
+
+![img](static/image/websocket-client.png)
 
 #### client-socket.js
 ```JavaScript
@@ -97,21 +99,45 @@ node server\server-websocket.js
     })
 ```
 
-* 配合示例，启动本地socket服务
+* 配合client-socket.js示例，启动本地socket服务
+
 ```bash
-node server\server-socket.js
+node server/server-socket.js
 ```
 
+客户端
+![img](static/image/socket-client.jpg)
+服务端
+![img](static/image/socket-server.jpg)
 
 ## 二、运行脚本
 
-### 生成测试报告
+### (一) 运行指定脚本
+
+命令行执行
+
+#### http client request
+```bash
+./node_modules/.bin/mocha test/client-http.js --reporter mochawesome
+```
+#### socket client request
+```bash
+./node_modules/.bin/mocha  test/client-socket.js --reporter mochawesome
+```
+#### websocket client request
+```bash
+./node_modules/.bin/mocha  test/client-websocket.js --reporter mochawesome
+```
+
+
+### (二) 生成不同格式测试报告
 
 html、json
 ---
-```
+```bash
 npm run mochawesome
 ```
+
 ![img](static/image/html.png)
 xml
 ---

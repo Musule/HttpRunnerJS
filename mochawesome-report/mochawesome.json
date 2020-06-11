@@ -1,293 +1,93 @@
 {
   "stats": {
-    "suites": 3,
-    "tests": 7,
-    "passes": 4,
-    "pending": 3,
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 2,
     "failures": 0,
-    "start": "2020-06-11T07:38:36.990Z",
-    "end": "2020-06-11T07:38:37.026Z",
-    "duration": 36,
-    "testsRegistered": 7,
-    "passPercent": 100,
-    "pendingPercent": 42.857142857142854,
+    "start": "2020-06-11T15:39:49.430Z",
+    "end": "2020-06-11T15:39:49.435Z",
+    "duration": 5,
+    "testsRegistered": 2,
+    "passPercent": null,
+    "pendingPercent": 100,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
-    "hasSkipped": false
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "success"
   },
-  "results": [
-    {
-      "uuid": "b1f11564-5bbe-493c-8b35-011eece6cbb0",
-      "title": "",
-      "fullFile": "",
-      "file": "",
-      "beforeHooks": [
-        {
-          "title": "\"before all\" hook: 所有脚本执行前执行",
-          "fullTitle": "\"before all\" hook: 所有脚本执行前执行",
-          "timedOut": false,
-          "duration": 0,
-          "state": null,
-          "speed": null,
-          "pass": false,
-          "fail": false,
-          "pending": false,
-          "context": null,
-          "code": "it(\"获取token\", () => {\n    console.log(\n        chalk.green.bold(\n            \"这边可以做登录请求获取token\"\n        )\n    )\n})",
-          "err": {},
-          "uuid": "cbf42b73-d166-46ed-bca7-de91d460866e",
-          "parentUUID": "b1f11564-5bbe-493c-8b35-011eece6cbb0",
-          "isHook": true,
-          "skipped": false
-        },
-        {
-          "title": "\"before each\" hook",
-          "fullTitle": "\"before each\" hook",
-          "timedOut": false,
-          "duration": 0,
-          "state": null,
-          "speed": null,
-          "pass": false,
-          "fail": false,
-          "pending": false,
-          "context": null,
-          "code": "// addContext(this, 'some context')",
-          "err": {},
-          "uuid": "dcaa5d66-4cb8-45d8-9bc1-fc19f3f940aa",
-          "parentUUID": "b1f11564-5bbe-493c-8b35-011eece6cbb0",
-          "isHook": true,
-          "skipped": false
-        }
-      ],
-      "afterHooks": [],
-      "tests": [
-        {
-          "title": "获取token",
-          "fullTitle": "获取token",
-          "timedOut": false,
-          "duration": 1,
-          "state": "passed",
-          "speed": "fast",
-          "pass": true,
-          "fail": false,
-          "pending": false,
-          "context": null,
-          "code": "console.log(\n    chalk.green.bold(\n        \"这边可以做登录请求获取token\"\n    )\n)",
-          "err": {},
-          "uuid": "ac6fb731-2441-400f-b2fb-4cf23532a3af",
-          "parentUUID": "b1f11564-5bbe-493c-8b35-011eece6cbb0",
-          "isHook": false,
-          "skipped": false
-        }
-      ],
-      "suites": [
-        {
-          "uuid": "8dd82a31-c4e5-44e0-b5ac-354962711c42",
-          "title": "application/json",
-          "fullFile": "D:\\自动化\\HttpRunnerJS\\test\\http.js",
-          "file": "\\test\\http.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "GET  The first format",
-              "fullTitle": "application/json GET  The first format",
-              "timedOut": false,
-              "duration": 2,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// Mocking a GET request\nMock.onGet(\"/users\", { params: { searchText: \"Jack\" } }).reply(200, {\n    users: [{ id: 1, name: \"Jack LEE\" }],\n});\n// send a GET request\naxios\n    .get(\"/users\", { params: { searchText: \"Jack\" } })\n    .then(function (response) {\n        console.log(chalk.green.bold('response status'), chalk.blue.bold(response.status));// 状态码\n        // console.log(chalk.green.bold('response header'), chalk.blue.bold(JSON.stringify(response.headers)));// 获取响应头\n        console.log(chalk.green.bold('response body'), chalk.blue.bold(JSON.stringify(response.data)));// 获取响应体\n    });",
-              "err": {},
-              "uuid": "fd19708e-76c3-4f47-877c-5633b4434b56",
-              "parentUUID": "8dd82a31-c4e5-44e0-b5ac-354962711c42",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "GET The second format",
-              "fullTitle": "application/json GET The second format",
-              "timedOut": false,
-              "duration": 0,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// Mocking a GET request\nMock.onGet(\"/users\", { params: { searchText: \"John\" } }).reply(200, {\n    users: [{ id: 1, name: \"John Smith\" }],\n});\n// send a GET request\naxios({\n    \"url\": \"/users\",\n    \"method\": \"get\",\n    \"params\": { searchText: \"John\" }\n}).then(response => {\n    console.log(chalk.green.bold('response status'), chalk.blue.bold(response.status));// 状态码\n    // console.log(chalk.green.bold('response header'), chalk.blue.bold(JSON.stringify(response.headers)));// 获取响应头\n    console.log(chalk.green.bold('response body'), chalk.blue.bold(JSON.stringify(response.data)));// 获取响应体\n}).catch(err => {\n    // console.error(err)\n})",
-              "err": {},
-              "uuid": "e180cc3d-fcd6-4a90-b747-b677780ade8f",
-              "parentUUID": "8dd82a31-c4e5-44e0-b5ac-354962711c42",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "POST",
-              "fullTitle": "application/json POST",
-              "timedOut": false,
-              "duration": 0,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// Mocking a POST request\nMock.onPost('api/auth/login', { username: 'admin', password: '123456' }).reply(200, { status: 200, msg: \"success\" })\n/**\n * @description send a  POST request\n * @param url 请求地址\n * @param method 请求方法\n * @param headers 请求头\n * @param data 请求体\n * @method then 回调函数 处理返回结果\n * @method catch 回调函数 捕获异常\n */\naxios({\n    \"url\": \"api/auth/login\",\n    \"method\": \"post\",\n    \"headers\": { \"Content-Type\": \"application/json\" },\n    \"data\": { username: 'admin', password: '123456' }\n})\n    .then(response => {\n        console.log(chalk.green.bold('response status'), chalk.blue.bold(response.status));// 状态码\n        // console.log(chalk.green.bold('response header'), chalk.blue.bold(JSON.stringify(response.headers)));// 获取响应头\n        console.log(chalk.green.bold('response body'), chalk.blue.bold(JSON.stringify(response.data)));// 获取响应体\n    }).catch(err => {\n        // console.error(err)\n    })",
-              "err": {},
-              "uuid": "6d50697f-484a-44b3-842f-c83a91835039",
-              "parentUUID": "8dd82a31-c4e5-44e0-b5ac-354962711c42",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "fd19708e-76c3-4f47-877c-5633b4434b56",
-            "e180cc3d-fcd6-4a90-b747-b677780ade8f",
-            "6d50697f-484a-44b3-842f-c83a91835039"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        },
-        {
-          "uuid": "9588cb01-766b-431c-a960-25c70b7e49a9",
-          "title": "multipart/form-data",
-          "fullFile": "D:\\自动化\\HttpRunnerJS\\test\\http.js",
-          "file": "\\test\\http.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "POST",
-              "fullTitle": "multipart/form-data POST",
-              "timedOut": false,
-              "duration": 0,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": true,
-              "context": null,
-              "code": "",
-              "err": {},
-              "uuid": "4efd1803-e480-4f26-a6ab-d38a1ebd2b4b",
-              "parentUUID": "9588cb01-766b-431c-a960-25c70b7e49a9",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [],
-          "failures": [],
-          "pending": [
-            "4efd1803-e480-4f26-a6ab-d38a1ebd2b4b"
-          ],
-          "skipped": [],
-          "duration": 0,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        },
-        {
-          "uuid": "5a2384b8-8f4b-4582-9cd7-6088904758b4",
-          "title": "application/x-www-form-urlencoded",
-          "fullFile": "D:\\自动化\\HttpRunnerJS\\test\\http.js",
-          "file": "\\test\\http.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "POST",
-              "fullTitle": "application/x-www-form-urlencoded POST",
-              "timedOut": false,
-              "duration": 0,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": true,
-              "context": null,
-              "code": "",
-              "err": {},
-              "uuid": "fa9253bb-65fe-41f1-8464-80991da9a29d",
-              "parentUUID": "5a2384b8-8f4b-4582-9cd7-6088904758b4",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "GET",
-              "fullTitle": "application/x-www-form-urlencoded GET",
-              "timedOut": false,
-              "duration": 0,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": true,
-              "context": null,
-              "code": "",
-              "err": {},
-              "uuid": "e908b92a-ba10-42e7-a263-799daaa8c812",
-              "parentUUID": "5a2384b8-8f4b-4582-9cd7-6088904758b4",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [],
-          "failures": [],
-          "pending": [
-            "fa9253bb-65fe-41f1-8464-80991da9a29d",
-            "e908b92a-ba10-42e7-a263-799daaa8c812"
-          ],
-          "skipped": [],
-          "duration": 0,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [
-        "ac6fb731-2441-400f-b2fb-4cf23532a3af"
-      ],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 1,
-      "root": true,
-      "rootEmpty": false,
-      "_timeout": 2000
-    }
-  ],
-  "meta": {
-    "mocha": {
-      "version": "7.2.0"
-    },
-    "mochawesome": {
-      "options": {
-        "quiet": false,
-        "reportFilename": "mochawesome",
-        "saveHtml": true,
-        "saveJson": true,
-        "consoleReporter": "spec",
-        "useInlineDiffs": false,
-        "code": true
-      },
-      "version": "6.1.1"
-    },
-    "marge": {
-      "options": null,
-      "version": "5.1.0"
-    }
-  }
+  "suites": {
+    "uuid": "446bbcc1-28ab-4623-b505-c05b2a9150aa",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "287563ac-5af0-462b-9b60-655a08b48677",
+        "title": "websocket client",
+        "fullFile": "/Users/liyinchi/workspace/AutoTest/api/nodejs/HttpRunnerJS/test/client-websocket.js",
+        "file": "/test/client-websocket.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "websocket connect",
+            "fullTitle": "websocket client websocket connect",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": true,
+            "code": "",
+            "err": {},
+            "isRoot": false,
+            "uuid": "82386f10-f575-4789-bae1-0f55f857bc13",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "websocket connectFailed",
+            "fullTitle": "websocket client websocket connectFailed",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": true,
+            "code": "",
+            "err": {},
+            "isRoot": false,
+            "uuid": "fde3746d-eb9a-4582-8d2b-0c5445786f9c",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [],
+        "pending": [
+          "82386f10-f575-4789-bae1-0f55f857bc13",
+          "fde3746d-eb9a-4582-8d2b-0c5445786f9c"
+        ],
+        "skipped": [],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2020
 }
