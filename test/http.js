@@ -8,6 +8,10 @@ const db = low(adapter); // 定义文件内容对象
 var MockAdapter = require("axios-mock-adapter");//mock服务
 var Mock = new MockAdapter(axios);// 定义mock对象
 
+beforeEach(function () {
+    // addContext(this, 'some context')
+  });
+
 before("所有脚本执行前执行", () => {
     it("获取token", () => {
         console.log(

@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1591865280739' stop='1591865280739'>
+    <name>application/x-www-form-urlencoded</name>
+    <title>application/x-www-form-urlencoded</title>
+    <test-cases>
+        <test-case start='1591865280739' status='pending' stop='1591865280739'>
+            <name>POST</name>
+            <title>POST</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1591865280739' status='pending' stop='1591865280739'>
+            <name>GET</name>
+            <title>GET</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

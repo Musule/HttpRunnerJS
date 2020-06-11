@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0040" tests="6" failures="0" skipped="3">
+  <testsuite name="Root Suite" timestamp="2020-06-11T08:35:59" tests="0" time="0.0030" failures="0">
+    <testcase name="获取token" time="0.0030" classname="获取token">
+    </testcase>
+  </testsuite>
+  <testsuite name="application/json" timestamp="2020-06-11T08:35:59" tests="3" file="D:\自动化\HttpRunnerJS\test\http.js" time="0.0010" failures="0">
+    <testcase name="application/json GET  The first format" time="0.0010" classname="GET  The first format">
+    </testcase>
+    <testcase name="application/json GET The second format" time="0.0000" classname="GET The second format">
+    </testcase>
+    <testcase name="application/json POST" time="0.0000" classname="POST">
+    </testcase>
+  </testsuite>
+  <testsuite name="multipart/form-data" timestamp="2020-06-11T08:35:59" tests="1" file="D:\自动化\HttpRunnerJS\test\http.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="application/x-www-form-urlencoded" timestamp="2020-06-11T08:35:59" tests="2" file="D:\自动化\HttpRunnerJS\test\http.js" time="0.0000" failures="0">
+  </testsuite>
+</testsuites>
