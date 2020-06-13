@@ -19,6 +19,8 @@ describe('socket client', () => {
         socket.on('Server2Client', (data) => {// 绑定事件
             console.log(chalk.blue.bold(`【Client端3】服务端把处理后的数据，传递给客户端，内容是：${data}`));
         });
+        // 客户端触发广播事件（服务端boradcast）
+        socket.emit('broadcast','【Client端3】触发了这个广播事件')
         // 发生断开连接时
         socket.on('disconnect', () => {
             console.log(chalk.blue.bold(`【Client端3】disconnect`));

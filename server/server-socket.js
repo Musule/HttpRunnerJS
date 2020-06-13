@@ -22,8 +22,10 @@ io.on('connection', client => {
   });
   // 服务端触发客户端event事件
   client.emit('Server2Client', '我是服务端的数据，处理完数据我传给了客户端');
-  // 广播时间
-  client.broadcast('broadevent', ' 这是一条广播消息，除了发送者其他人都可以接收到');
+  // 广播事件 发送给所有客户端，除了发送者
+  client.broadcast.on('broadcast', (client) => {
+    console.log(client, { '广播事件内容': '【Server端】广播这是一条广播消息，除了发送者其他人都可以接收到' })
+  });// everyone gets it but the sender
 });
 
 // 服务端监听地址和端口
