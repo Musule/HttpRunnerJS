@@ -1,6 +1,10 @@
 # HttpRunnerJS
 
->JavaScript restful API 单元测试框架
+JavaScript restful API 单元测试框架
+
+
+recommend: [China-Gitee](https://gitee.com/liyinchi/HttpRunnerJS)，[Other-Github](https://github.com/Musule/HttpRunnerJS)
+
 
 ## 支持http、https、socket、websocket协议
 
