@@ -9,6 +9,14 @@ recommend: [China-Gitee](https://gitee.com/liyinchi/HttpRunnerJS)，[Other-Githu
 ## 支持http、https、socket、websocket协议
 
 ## 一、安装
+
+1.下载Nodejs
+
+>https://npm.taobao.org/mirrors/node/v0.12.13/
+
+
+
+2.安装所有依赖
 ```
 npm install
 ```
